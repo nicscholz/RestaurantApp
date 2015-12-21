@@ -1,0 +1,8 @@
+<%= stylesheet_link_tag    'items', media: 'all', 'data-turbolinks-track' => true %>
+
+<%= form_for @items do |f| %>
+  <p> Name <%= f.text_field :name %> </p>
+  <p> Description <%= f.text_field :description %> </p>
+  <p> Price <%= f.text_field :price %> </p>
+  <%= f.submit %>
+<% end%>

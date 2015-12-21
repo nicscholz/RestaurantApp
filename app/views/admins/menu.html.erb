@@ -1,0 +1,32 @@
+<div id="nav" class="twelve columns">
+ <ul>
+ <li><a class="button" href="/">Home</a></li>
+ <li><a class="button" href="/admins">Admin</a></li>
+ <li><a class="button" href="/items">Menu</a></li>
+ <li><a class="button" href="/orders">Orders</a></li>
+ <li><a class="button" href="/parties">Parties</a></li>
+ </ul>
+</div>
+<h4>Update Menu</h4>
+<table class="striped">
+  <thead>
+    <tr>
+        <th data-field="name">Name</th>
+        <th data-field="price">Price</th>
+        <th data-field="description">Description</th>
+        <th data-field="edit">Edit</th>
+        <th data-field="remove">Remove</th>
+    </tr>
+  </thead>
+  <tbody>
+<% @items.each do |item| %>
+    <tr>
+      <td><%= item.name %></td>
+      <td><%= item.description %></td>
+      <td><%= item.price %></td>
+      <td><%= button_to "Remove", item_path(item), method: :delete%></td>
+      <td>Edit</td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

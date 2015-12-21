@@ -1,0 +1,38 @@
+<%= stylesheet_link_tag    'parties', media: 'all', 'data-turbolinks-track' => true %>
+<div id="nav" class="twelve columns">
+ <ul>
+ <li><a class="button" href="/">Home</a></li>
+ <li><a class="button" href="/admins">Admin</a></li>
+ <li><a class="button" href="/items">Menu</a></li>
+ <li><a class="button" href="/orders">Orders</a></li>
+ <li><a class="button" href="/parties">Parties</a></li>
+ </ul>
+</div>
+<h2>Current Parties</h2>
+
+<table class="striped">
+  <thead>
+    <tr>
+        <th data-field="guest_total">Guest Total</th>
+        <th data-field="top_number">Top Number</th>
+    </tr>
+  </thead>
+  <tbody>
+<% @parties.each do |party| %>
+    <tr>
+      <td><%= party.guest_total %></td>
+      <td><%= party.top_number %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<div class="row">
+<div class="col s2"></div>
+<div class="col s4">
+<%= button_to 'NEW PARTY', '/parties/new', method: :get, class: "waves-effect waves-light btn" %>
+</div>
+<div class="col s4">
+<%= button_to 'NEW ORDER', '/orders', method: :get, class: "waves-effect waves-light btn" %>
+</div>
+<div class="col s2"></div>
+</div>

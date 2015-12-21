@@ -1,0 +1,15 @@
+<div id="nav" class="twelve columns">
+ <ul>
+ <li><a class="button" href="/">Home</a></li>
+ <li><a class="button" href="/admins">Admin</a></li>
+ <li><a class="button" href="/items">Menu</a></li>
+ <li><a class="button" href="/orders">Orders</a></li>
+ <li><a class="button" href="/parties">Parties</a></li>
+ </ul>
+</div>
+<h2>Login</h2>
+<%= form_tag session_path do %>
+  <%= text_field_tag :admin_name %>
+  <%= password_field_tag :password %>
+  <%= submit_tag "LogIn" %>
+<% end %>

@@ -1,0 +1,21 @@
+<%= stylesheet_link_tag    'parties', media: 'all', 'data-turbolinks-track' => true %>
+<div id="nav" class="twelve columns">
+ <ul>
+ <li><a class="button" href="/">Home</a></li>
+ <li><a class="button" href="/admins">Admin</a></li>
+ <li><a class="button" href="/items">Menu</a></li>
+ <li><a class="button" href="/orders">Orders</a></li>
+ <li><a class="button" href="/parties">Parties</a></li>
+ </ul>
+</div>
+<h4>Add A New Party</h4>
+
+<%= form_for @party do |f| %>
+  <%= f.label :guest_total, "Number of Guests" %>
+  <%= f.text_field :guest_total %><br>
+  <%= f.label :top_number, "Table Number" %>
+  <%= f.text_field :top_number %><br>
+  <%= f.submit :class => "button-primary"%>
+<% end %>
+
+<%= button_to 'NEW ORDER', '/orders/new', method: :get, class: "button-primary" %>

@@ -1,0 +1,36 @@
+<%= stylesheet_link_tag    'orders', media: 'all', 'data-turbolinks-track' => true %>
+<div id="nav" class="twelve columns">
+ <ul>
+ <li><a class="button" href="/">Home</a></li>
+ <li><a class="button" href="/admins">Admin</a></li>
+ <li><a class="button" href="/items">Menu</a></li>
+ <li><a class="button" href="/orders">Orders</a></li>
+ <li><a class="button" href="/parties">Parties</a></li>
+ </ul>
+</div>
+<h4>CURRENT ORDERS</h4>
+
+<table>
+  <thead>
+    <tr>
+        <th>Order</th>
+        <th>Price</th>
+        <th>Party</th>
+        <th></th>
+        <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<% @orders.each do |order| %>
+    <tr>
+      <td><%= order.item.name %></td>
+      <td><%= order.item.price %></td>
+      <td><%= order.party_id %></td>
+      <td><%= button_to "Edit", ('orders#update'), method: :update, class: "button-primary" %></td>
+      <td><%= button_to "Remove", order_path(order), method: :delete, class: "button-primary" %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<br>
+<%= button_to 'New Order', new_order_path, method: :get, class: "button-primary" %>
