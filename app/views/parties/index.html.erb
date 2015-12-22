@@ -17,13 +17,14 @@
   <thead>
     <tr>
         <th data-field="guest_total">Guest Total</th>
-        <th data-field="top_number"></th>
+        <th data-field="top_number">Description</th>
     </tr>
   </thead>
   <tbody>
 <% @parties.each do |party| %>
     <tr>
       <td><%= party.guest_total %></td>
+      <td><%= party.top_number %></td>
     </tr>
   <% end %>
   </tbody>
