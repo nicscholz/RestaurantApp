@@ -1,2 +1,2 @@
-module OrdersControllerHelper
+module OrdersHelper
 end

@@ -11,9 +11,22 @@
  * file per style scope.
  *
  *= require materialize
- *= require skeleton
- *= require normalize
  *= require_tree .
  *= require_self
 
  */
+/*
+ body {
+   text-align: center;
+   background: radial-gradient(rgb(255, 230, 224), rgb(232, 133, 122));
+   min-height: 600px;
+ }*/
+
+ body {
+   background-image: url("http://7-themes.com/data_images/out/21/6839222-gradient.jpg");
+ }
+
+ .page-footer {
+    position: absolute;
+    bottom: 0;
+}

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+      root 'welcome#index'
+
     resources :parties
     resources :items
     resources :admins
@@ -11,7 +13,7 @@ Rails.application.routes.draw do
       delete "/session" => 'session#destroy'
 
 
-          root 'welcome#index'
+
 
 
 

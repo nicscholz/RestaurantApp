@@ -1,9 +1,54 @@
 <%= stylesheet_link_tag    'welcome', media: 'all', 'data-turbolinks-track' => true %>
 
-<h4>Welcome to The RESPOS</h4>
 
-<%= button_to 'Admin Login', new_admin_path, method: :get, class: "button-primary" %>
-<br>
-<%= button_to 'New Party', new_party_path, method: :get, class: "button-primary" %>
-<br>
-<%= button_to 'View Menu', '/items', method: :get, class: "button-primary" %>
+<nav>
+   <div class="nav-wrapper">
+      <a url="images/logo.png" class="brand-logo right">RESPOS</a>
+     <ul id="nav-mobile" class="left hide-on-med-and-down">
+       <li><a class="button" href="/">Home</a></li>
+       <li><a class="button" href="/admins">Admin</a></li>
+       <li><a class="button" href="/items">Menu</a></li>
+       <li><a class="button" href="/orders">Orders</a></li>
+       <li><a class="button" href="/parties">Parties</a></li>
+       </ul>
+</nav>
+
+<div class="container">
+   <div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">RESPOS</span>
+              <p>This is a place where servers and users can  catalog and manage food orders from clients in the restaurant </p>
+            </div>
+            <div class="card-action">
+               <%= button_to 'Admin Login', new_admin_path, method: :get, class: "waves-effect waves-light btn-large" %>
+               <br>
+               <%= button_to 'New Party', new_party_path, method: :get, class: "waves-effect waves-light btn-large" %>
+               <br>
+               <%= button_to 'View Menu', '/items', method: :get, class: "waves-effect waves-light btn-large" %>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+
+
+<footer class="page-footer">
+     <div class="container">
+       <div class="row">
+         <div class="col l6 s12">
+           <h5 class="white-text">RESPOS</h5>
+           <p class="grey-text text-lighten-4">This is a place where servers and users can  catalog and manage food orders from clients in the restaurant </p>
+         </div>
+         <div class="col l4 offset-l2 s12">
+           <h5 class="white-text">Thank You.</h5>
+         </div>
+       </div>
+     </div>
+     <div class="footer-copyright">
+       <div class="container">
+       © 2014 Copyright Text
+       </div>
+     </div>
+   </footer>

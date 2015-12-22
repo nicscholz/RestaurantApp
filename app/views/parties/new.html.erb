@@ -1,13 +1,16 @@
 <%= stylesheet_link_tag    'parties', media: 'all', 'data-turbolinks-track' => true %>
-<div id="nav" class="twelve columns">
- <ul>
- <li><a class="button" href="/">Home</a></li>
- <li><a class="button" href="/admins">Admin</a></li>
- <li><a class="button" href="/items">Menu</a></li>
- <li><a class="button" href="/orders">Orders</a></li>
- <li><a class="button" href="/parties">Parties</a></li>
- </ul>
-</div>
+<nav>
+   <div class="nav-wrapper">
+      <a url="images/logo.png" class="brand-logo right">RESPOS</a>
+     <ul id="nav-mobile" class="left hide-on-med-and-down">
+       <li><a class="button" href="/">Home</a></li>
+       <li><a class="button" href="/admins">Admin</a></li>
+       <li><a class="button" href="/items">Menu</a></li>
+       <li><a class="button" href="/orders">Orders</a></li>
+       <li><a class="button" href="/parties">Parties</a></li>
+       </ul>
+</nav>
+
 <h4>Add A New Party</h4>
 
 <%= form_for @party do |f| %>
@@ -15,7 +18,26 @@
   <%= f.text_field :guest_total %><br>
   <%= f.label :top_number, "Table Number" %>
   <%= f.text_field :top_number %><br>
-  <%= f.submit :class => "button-primary"%>
+  <%= f.submit :class => "waves-effect waves-light btn"%>
 <% end %>
+<br>
+<%= button_to 'NEW ORDER', '/orders/new', method: :get, class: "waves-effect waves-light btn" %>
 
-<%= button_to 'NEW ORDER', '/orders/new', method: :get, class: "button-primary" %>
+<footer class="page-footer">
+<div class="container">
+ <div class="row">
+   <div class="col l6 s12">
+     <h5 class="white-text">RESPOS</h5>
+     <p class="grey-text text-lighten-4">This is a place where servers and users can  catalog and manage food orders from clients in the restaurant </p>
+   </div>
+   <div class="col l4 offset-l2 s12">
+     <h5 class="white-text">Thank You.</h5>
+   </div>
+ </div>
+</div>
+<div class="footer-copyright">
+ <div class="container">
+ © 2014 Copyright Text
+ </div>
+</div>
+</footer>

@@ -1,2 +1,2 @@
-module PartiesControllerHelper
+module PartiesHelper
 end

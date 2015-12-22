@@ -1,2 +1,2 @@
-module SessionControllerHelper
+module SessionHelper
 end

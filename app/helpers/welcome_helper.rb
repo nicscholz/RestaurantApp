@@ -1,2 +1,2 @@
-module WelcomeControllerHelper
+module WelcomeHelper
 end

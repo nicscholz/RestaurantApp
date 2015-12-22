@@ -1,13 +1,16 @@
 <%= stylesheet_link_tag    'orders', media: 'all', 'data-turbolinks-track' => true %>
-<div id="nav" class="twelve columns">
- <ul>
- <li><a class="button" href="/">Home</a></li>
- <li><a class="button" href="/admins">Admin</a></li>
- <li><a class="button" href="/items">Menu</a></li>
- <li><a class="button" href="/orders">Orders</a></li>
- <li><a class="button" href="/parties">Parties</a></li>
- </ul>
-</div>
+<nav>
+   <div class="nav-wrapper">
+      <a url="images/logo.png" class="brand-logo right">RESPOS</a>
+     <ul id="nav-mobile" class="left hide-on-med-and-down">
+       <li><a class="button" href="/">Home</a></li>
+       <li><a class="button" href="/admins">Admin</a></li>
+       <li><a class="button" href="/items">Menu</a></li>
+       <li><a class="button" href="/orders">Orders</a></li>
+       <li><a class="button" href="/parties">Parties</a></li>
+       </ul>
+</nav>
+
 <h4>CURRENT ORDERS</h4>
 
 <table>
@@ -26,11 +29,30 @@
       <td><%= order.item.name %></td>
       <td><%= order.item.price %></td>
       <td><%= order.party_id %></td>
-      <td><%= button_to "Edit", ('orders#update'), method: :update, class: "button-primary" %></td>
-      <td><%= button_to "Remove", order_path(order), method: :delete, class: "button-primary" %></td>
+      <td><%= button_to "Edit", ('orders#update'), method: :update, class: "waves-effect waves-light btn" %></td>
+      <td><%= button_to "Remove", order_path(order), method: :delete, class: "waves-effect waves-light btn" %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
 <br>
-<%= button_to 'New Order', new_order_path, method: :get, class: "button-primary" %>
+<%= button_to 'New Order', new_order_path, method: :get, class: "waves-effect waves-light btn" %>
+
+<footer class="page-footer">
+<div class="container">
+ <div class="row">
+   <div class="col l6 s12">
+     <h5 class="white-text">RESPOS</h5>
+     <p class="grey-text text-lighten-4">This is a place where servers and users can  catalog and manage food orders from clients in the restaurant </p>
+   </div>
+   <div class="col l4 offset-l2 s12">
+     <h5 class="white-text">Thank You.</h5>
+   </div>
+ </div>
+</div>
+<div class="footer-copyright">
+ <div class="container">
+ © 2014 Copyright Text
+ </div>
+</div>
+</footer>
